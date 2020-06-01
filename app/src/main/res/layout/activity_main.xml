@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bricks"
+
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="415dp"
+        android:layout_height="55dp"
+        android:background="@drawable/board">
+        <TextView
+            android:layout_width="203dp"
+            android:layout_height="40dp"
+            android:id="@+id/tv_playerX"
+            android:text="Player 1 : X"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_playerX"
+            tools:text="7"
+            android:id="@+id/tv_countX"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="#ffffff"/>
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:id="@+id/line"
+            android:layout_toRightOf="@id/tv_playerX"/>
+        <TextView
+            android:layout_width="213dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/line"
+            android:text="Player 2 : O"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textAlignment="center"
+
+            android:id="@+id/tv_playerO"
+            />
+        <TextView
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_playerO"
+            android:id="@+id/tv_countO"
+            android:layout_toRightOf="@id/tv_playerX"
+            tools:text="7"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:background="@drawable/board"
+        android:layout_height="350dp"
+        android:id="@+id/gameBoard_LinearLayout"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
